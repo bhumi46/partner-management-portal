@@ -22,8 +22,12 @@ jobs:
 
       - name: Run tests
         run: npx jest --coverage
+        working-directory: ./pmp-ui-v2
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: bhumi46/partner-management-portal
+
+
